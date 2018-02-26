@@ -78,7 +78,6 @@ console.log('Question 5 ' + q5)
  */
 
 var q6 = 0
-
 q5.forEach(function(num) {
 	q6 += num 
 })
