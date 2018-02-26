@@ -26,6 +26,7 @@ function startGame(userChoice) {
 	var cpuChoice = generateCPUChoice();
 	var winner = compare(userChoice, cpuChoice);
 	console.log(winner + ' is the winner!');
+	// console.log(winner);
 }
 
 // YOUR CODE BELOW!
@@ -46,20 +47,28 @@ function generateCPUChoice () {
 // This function should compare the two choices, and return a winner
 // For example, if userChoice === 'rock' and cpuChoice === 'scissors', then 'user' should be returned
 // Hint: use if/else/ele if logic to compare the values and return a winner
+
 function compare(userChoice, cpuChoice) {
-	if (userChoice === 'rock' && cpuChoice === 'scissors') {
-		return userChoice
-	} else if (userChoice === 'scissors' && cpuChoice === 'paper') {
-		return userChoice
-	} else if (userChoice === 'paper' && cpuChoice === 'rock') {
-		return userChoice
-	} else if (userChoice === 'scissors' && cpuChoice === 'rock') {
-		return cpuChoice
-	} else if (userChoice === 'paper' && cpuChoice === 'scissors') {
-		return cpuChoice
-	} else if (userChoice === 'rock' && cpuChoice === 'paper') {
-		return cpuChoice
-	}	
-}
-
-
+     if (userChoice === "rock" && cpuChoice === "scissors") {
+         // rock wins
+         return 'User'
+     } else {
+        // paper wins
+        return 'Computer'
+     }
+     if (userChoice === "paper" && cpuChoice === "rock") {
+     	// paper wins
+        return 'User'
+	} else {
+        // scissors wins
+        return 'Computer'
+    }
+    if (userChoice === "scissors" &&  cpuChoice === "rock") {
+        // rock wins
+        return 'Computer'
+    } else {
+        // scissors wins
+       return 'User'
+    }
+ }
+      
