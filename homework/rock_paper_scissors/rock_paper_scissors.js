@@ -51,24 +51,18 @@ function generateCPUChoice () {
 function compare(userChoice, cpuChoice) {
      if (userChoice === "rock" && cpuChoice === "scissors") {
          // rock wins
-         return 'User'
+         return 'Rock'
      } else {
         // paper wins
-        return 'Computer'
+        return 'Paper'
      }
      if (userChoice === "paper" && cpuChoice === "rock") {
      	// paper wins
-        return 'User'
+        return 'Paper'
 	} else {
         // scissors wins
-        return 'Computer'
-    }
-    if (userChoice === "scissors" &&  cpuChoice === "rock") {
-        // rock wins
-        return 'Computer'
-    } else {
-        // scissors wins
-       return 'User'
+        return 'Scissors'
     }
  }
+ 
       
