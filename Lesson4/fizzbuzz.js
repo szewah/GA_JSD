@@ -19,11 +19,20 @@
 
 // ##### Step 1:
 // Construct a for loop that iterates through, and `console.log()`'s out, numbers 1 - 100.
-
-
-
+for (var i = 0; i <= 100; i++) {
 // ##### Step 2:
 // Add an `if/else` statement that logs the string `"fizz"` if the value being iterated over is divisible by `3`; otherwise, log out the value.
+	if (i % 3 === 0 && i % 5 === 0) {
+		console.log('fizzbuzz')
+	} else if (i % 5 === 0) {
+		console.log('buzz')
+	} else if (i % 3 === 0) {
+		console.log('fizz')
+	} else {
+		console.log(i)
+	}
+}
+
 
 
 

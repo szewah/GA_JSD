@@ -35,7 +35,7 @@
 // ##### Step 4:
 // Add an additional `else if` clause that logs the string `"fizzbuzz"` if the value being iterated over is divisible by both `3` and `5`.
 
-for (var i = 1, i <= 100, i++) {
+for (var i = 1; i <= 100; i++) {
   if (i % 15 === 0) {
     console.log('fizzubzz')
   } else if (i % 5 === 0) {
