@@ -84,3 +84,8 @@ q5.forEach(function(num) {
 
 console.log('Question 6 ' + q6)
 // Your code here
+
+
+
+//.filter() is to distill it into an another array
+//filter and map require a return statement inside eah one. filter needs a boolean.

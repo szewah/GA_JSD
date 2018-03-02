@@ -258,15 +258,31 @@ var flickerObj = {
   Ambassador South
 */
 
-
+flickerObj.items.forEach(function(item) {
+    console.log(item.title)
+})
 
 /*
   2. Create a new array called 'links'. Iterate through the items array in flickerObj and store the the links to each item in the 'links' array.
 */
 
+var links = []
 
+flickerObj.items.filter(function(item) {
+    links.push(item.link)
+})
+
+console.log(links)
 
 /*
   3. Convert the 'links' array into a JSON string. Do a console.log of that JSON string, copy the results from the terminal and paste them into the input box at http://jsonlint.com/
 Did it create a valid JSON string?
 */
+
+linksJSON = JSON.stringify(links)
+console.log(linksJSON)
+
+
+
+
+

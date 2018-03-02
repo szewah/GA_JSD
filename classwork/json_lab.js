@@ -1,5 +1,5 @@
 // JSON is a subset of the object literal notation of JavaScript; we use JSON to transfer data between programs.
-// ----  RULES ----
+	// ----  RULES ----
 // Property names must be double-quoted strings; trailing commas are forbidden.
 // Leading zeroes are prohibited; a decimal point must be followed by at least one digit.
 // Most characters are allowed in strings, except certain control characters.
@@ -31,6 +31,14 @@ var notActuallyJSON = {
 // There are a total of three errors.
 //
 var eddie = {name:"Eddie Vedder", age:49,};
+
+
+var eddie = {
+	"name": "Eddie Vedder",
+	"age": 49
+}
+
+
 
 // [ Step 3 ]
 // We frequently want to turn a JavaScript object into a JSON string, and vice versa.
@@ -76,6 +84,10 @@ var grungeAlbums = {
   ]
 }
 
+var grungeAlbumsJSON = JSON.stringify(grungeAlbums)
+
+console.log(grungeAlbumsJSON) 
+
 // [ Step 4 ]
 // Imagine that we only had JSON to work with, and wanted to convert it to a JS Object.
 // Fortunately, the `JSON` global object converts both ways - to and from JSON.
@@ -89,6 +101,10 @@ var grungeAlbums = {
 //  Album: Album name
 //  Artist: Artist name
 //  Units sold: 31234
+
+var grungeAlbumsParsed = JSON.parse(grungeAlbumsJSON)
+
+console.log(grungeAlbumsParsed.albums)
 
 
 
