@@ -268,11 +268,19 @@ flickerObj.items.forEach(function(item) {
 
 var links = []
 
-flickerObj.items.filter(function(item) {
+flickerObj.items.map(function(item) {
     links.push(item.link)
 })
 
 console.log(links)
+
+var authorID = []
+flickerObj.items.map(function(item) {
+    authorID.push(item.author_id)
+
+})
+
+console.log(authorID)
 
 /*
   3. Convert the 'links' array into a JSON string. Do a console.log of that JSON string, copy the results from the terminal and paste them into the input box at http://jsonlint.com/
@@ -281,6 +289,9 @@ Did it create a valid JSON string?
 
 linksJSON = JSON.stringify(links)
 console.log(linksJSON)
+
+authorIDJSON = JSON.stringify(authorID)
+console.log(authorIDJSON)
 
 
 
