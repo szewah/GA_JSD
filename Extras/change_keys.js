@@ -14,5 +14,14 @@ function changeKeys(keysToChange, steps) {
 	for (var i = 0; i<keysToChange.length; i++) {
 		var key = keysToChange[i]
 		var keysIndex = keys.indexOf(key)
+		newKeys.push(keys[keysIndex + steps]) % keys.length
 	}
+	return newKeys
 }
+
+
+
+console.log(changeKeys(['E', 'F'], 1))
+
+console.log(changeKeys(['D', 'G'], -1))
+
