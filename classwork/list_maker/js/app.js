@@ -68,7 +68,6 @@ function addNewItem() {
 	else {
 		alert("Please add your input!")
 	}
-	
 }
 
 
