@@ -3,15 +3,16 @@ function compareObjects(object1, object2) {
 	var objB = Object.getOwnPropertyNames(object2)
 	if (objA.length !== objB.length) {
 		return false
-	} for (var i = 0; i<objA.length; i++) {
-		var objName = objA[i] 
-		if (object1[objName] !== object2[objName]) {
-			return false
+	} 
+	var objectEquality = true
+	objA.forEach(function(key) {
+		if (object1[key] !== object2[key]) {
+			objectEquality = false
 		}
-		return true
-	}
+	})
+		return objectEquality
 }
 
-
+console.log(compareObjects({}, {}))
 console.log(compareObjects({ name: 'giselle' }, { name: 'zeke' }))
 console.log(compareObjects({ name: 'nick' }, { name: 'nick' }))

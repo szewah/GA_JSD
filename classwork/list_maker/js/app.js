@@ -38,37 +38,27 @@ and alert the user with using the "alert" method
 
 // document.querySelector('#add-item').onclick = addNewItem
 
-
 // function addNewItem() {
-// 	// console.log('test')
-// 	var newItem = document.querySelector('#new-item').value
-// 	// console.log(newItem)
 // 	var newListItem = document.createElement('li')
+// 	var newItem = document.querySelector('#new-item').value
 // 	newListItem.innerHTML = newItem
-// 	document.querySelector('#list').appendChild(newListItem)
-// 	if (newItem === "") {
-// 		alert("You must add something!")
-// 	} 	
+
+// 	if (newItem) {
+// 		document.querySelector('#list').appendChild(newListItem)
+// 		document.querySelector('#new-item').focus()
+// 		document.querySelector('#new-item').value = ""
+// 	} 
+// 	else {
+// 		alert("Please add your input!")
+// 	}
 // }
 
 
+// document.querySelector('li').onclick = removeItem
 
-document.querySelector('#add-item').onclick = addNewItem
-
-function addNewItem() {
-	var newListItem = document.createElement('li')
-	var newItem = document.querySelector('#new-item').value
-	newListItem.innerHTML = newItem
-
-	if (newItem) {
-		document.querySelector('#list').appendChild(newListItem)
-		document.querySelector('#new-item').focus()
-		document.querySelector('#new-item').value = ""
-	} 
-	else {
-		alert("Please add your input!")
-	}
-}
+// function removeItem() {
+// 	document.querySelector('li').value = ""
+// }
 
 
 
@@ -95,3 +85,45 @@ Hint: You can append HTML strings (ex: "<li>...</li>") using this method.
 5. Be sure to attempt the above bonuses as well.
 
 */
+
+
+
+$('#add-item').click(addNewItem)
+
+function addNewItem() {
+	var newItem = $('#new-item').val()
+	$('#list').append('<li>' + newItem + '</li>')
+	$('#new-item').focus()
+		.val('')
+		.focus()
+	$('li').click(function () {
+		$(this).remove()
+	})
+}
+
+
+
+// $('#add-item').click(addNewItem); 
+
+// function addNewItem() {
+// 	var newItem = $('#item').val();
+// 	appendItem(newItem);
+// 	if(newItem) {
+// 		$('#new-item').val();
+// 	} else {
+// 		alert('Please add an item');
+// 	}
+// 		$('#new-item')
+// 			.focus()
+// 			.val('')
+// }
+
+
+// function appendItem(text){
+// 	$('#list').append('<li>' + text + '</li>');
+// 	$('li').click(function() {
+//     	$(this).remove();
+//     });
+// }
+
+

@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					Object Oriented Javascript<br><span style="color: red">Objects</span></section>
+				<section>
+				<section>
+					<p> 
+						One benefit of using JavaScript for your server-side code is that you can use a single language across your entire stack. As long as you’ve got Node and a browser installed on your machine, you can devlop a full web application with JavaScript.			
+					</p>					
+				</section>
+				<section>
+					<h4>Data Types in Javascript</h4>
+					<p>
+						<ol>
+							<li><span style="color:red">undefined</span> <br>used to indicate no value. Known to exist but doesn't know the value.</li>
+							<li><span style="color:red">null</span> <br>variable without a value. No nothing of the thing exists.</li>
+							<li><span style="color:red">number</span></li>
+							<li><span style="color:red">string</span></li>
+							<li><span style="color:red">boolean</span></li>
+							<li><span style="color:red">object</span></li>
+						</ol>
+					</p>
+					<p>First five are primative values. The last is a reference type which holds key value pairs. </p>
+				</section>
+				<section>
+					<h4>In JS, almost everything is an object</h4>
+					<p>
+						<ul>
+							<li>Booleans, strings, numbers - if defined with a <b><span style="color:red">NEW</span></b> keyword</li>
+							<li>Dates, maths, arrays, functions, objects are always objects</li>
+							<li>All values except primatives are objects</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h4>Javascript Properties</h4>
+					<p>
+						<ul>
+							<li>A JS object is a collection of unordered properties</li>
+							<li>The JS <span style="color:red">for...in</span> statement loops through all its properties</li>
+							<li>The block of code inside the loop will be executed <span style="color:red">once</span> for each property</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h4>Javascript Methods</h4>
+					<p>
+						<ul>
+							<li>Methods are actions that are performed on objects</li>
+							<li>They are a property containing a function</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h4><span style="color: red">this</span> Keyword</h4>
+					<p>
+						<ul>
+							<li>You cannot changes its value</li>
+							<li>this is the object that owns the JS code</li>
+							<li>You can add built in methods or a new method</li>
+						</ul>
+						<p>
+	<pre><code>
+	person.name = function() {
+	return this.firstName + "" + this.lastName
+	}
+	</code></pre>
+						</p>
+					</p>
+				</section>
+				<section>
+					<h4>Prototypes</h4>
+					<p>
+						JS objects inherit properties and methods from a prototype. 
+						<ul>
+							<li>Date objects inherit from <span style="color:red"> Date.prototype</span></li>
+							<li>Array objects inherit from <span style="color:red">Array.prototype</span></li>
+							<li>Person objects inherit from <span style="color:red">Person.prototype</span></li>
+						</ul>
+					</p>
+					
+
+
+				</section>
+				<section>
+					<h4>Object <span style="color: red">Constructors</span></h4>
+					<p>
+	<pre><code>
+	function Person(first, last, age, eye) {
+	this.firstName = first
+	this.lastName = last
+	this.age = age
+	this.eyeColor = eye 
+	}
+
+	var myFather = new Person ('John', 'Doe', 50, 'Blue')
+	</code></pre>
+					</p>
+					<p>
+						To add a new property to a constructor, add it to the constructor function
+					</p>
+				</section>
+				<section>
+					<h4>Built in JS Constructors</h4>
+					<p>
+	<pre><code>
+	var x1 = new Object() or var x1 = {}
+	var x2 = new String() or var x2 = ""
+	var x3 = new Number() or var x3 = 0
+	var x4 = new Boolean() or var x4 = false
+	var x5 = new Array() or var x5 = []
+	var x6 = new Function() or var x6 = (){}
+	</code></pre>
+						
+						<p>Math Object is a global object. The new keyword can't be used on Math</p>	
+					</p>
+				</section>
+				<section></section>
+				<section></section>
+				<section></section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

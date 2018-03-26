@@ -1,8 +1,8 @@
-body {
+/*body {
 	background: url('../images/apple.png');
 	line-height: 1.8;
 }
-
+*/
 #wrapper {
 	width: 800px;
 	padding: 40px;
@@ -11,13 +11,17 @@ body {
 }
 
 h1 {
-	font-family: "Sue Ellen Francisco", Arial, sans-serif;
+	font-family: Arial, sans-serif;
 	color: #333333;
 	font-size: 40px;
+/*	text-align: center*/
 }
 
+
+/*"Sue Ellen Francisco", */
+
 ul {
-	font-family: "Sue Ellen Francisco", Arial, sans-serif;
+	font-family: Arial, sans-serif;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -25,25 +29,39 @@ ul {
 }
 
 ul li {
-	border-bottom: 2px dotted #9CE6C1;
+	border-bottom: 2px dotted orange;
+	cursor: pointer;
 }
+
+
+/* darker font-color on hover */
+ul li:hover {
+    color: #dde;
+}
+
 
 input {
 	width: 400px;
-	font-family: monospace;
+	font-family: arial;
 	font-size: 20px;
-	margin: 20px 0;
-	border: 1px solid #9CE6C1;
+	margin: 30px 0;
+	border: 3px solid orange;
 	box-shadow: none;
-	padding: 10px;
+	padding: 11px;
 }
 
 button {
 	width: 200px;
-	font-family: monospace;
-	font-size: 20px;
-	margin: 20px 0;
-	border: 1px solid #9CE6C1;
+	font-family: arial;
+	font-size: 15px;
+	margin: 30px 0;
 	box-shadow: none;
-	padding: 10px;
+	padding:13px;
+	color: white;
+	background: grey;
+	cursor: pointer;
+}
+
+button:hover {
+    background-color: #A9A9A9;
 }
